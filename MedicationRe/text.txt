@@ -1,0 +1,477 @@
+import * as React from "react";
+import { StyleSheet, View, Pressable, Text, Image , TouchableHighlight} from "react-native";
+import { Color, Border, FontFamily } from "./GlobalStyles";
+import { SafeAreaView } from "react-native-safe-area-context";
+
+const Onborading = ({handlechange}) => {
+    
+  return (
+    <SafeAreaView>
+    <View >
+      <Pressable
+        style={[styles.onborading1Child, styles.saly3ShadowBox]}
+        onPress={() => {}}
+      />
+      <Text style={styles.easy}>EASY</Text>
+      <Text style={styles.catatKeuanganmuDengan}>{`Catat Keuanganmu dengan
+Mudah, setiap pengeluaran dan pemasukan akan terdata rapi
+ kamu dapat melihat pengeluaran harian, mingguan, dan bulanan`}</Text>
+       <TouchableHighlight
+  activeOpacity={0.6}
+  underlayColor="#DDDDDD"
+  onPress={handlechange}>
+ <Image
+          style={[styles.nextIcon, styles.iconPosition]}
+          resizeMode="cover"
+          source={require("../../assets/next.png")}
+        />
+     </TouchableHighlight>
+      <View style={[styles.saly3, styles.saly3ShadowBox]}>
+        <Image
+          style={[styles.saly3Icon, styles.iconPosition]}
+          resizeMode="cover"
+          source={require("../../assets/Saly3.png")}
+        />
+      </View>
+
+       
+      
+      <View style={styles.skipWrapper}>
+        <Text style={styles.skip}>Skip</Text>
+      </View>
+    </View>
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  saly3ShadowBox: {
+    shadowOpacity: 1,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    position: "absolute",
+  },
+  iconPosition: {
+    // maxHeight: "100%",
+    // maxWidth: "100%",
+    // bottom: "0%",
+    // height: "100%",
+    // right: "0%",
+    // top: "0%",
+    // position: "absolute",
+    // overflow: "hidden",
+  },
+  paginationLayout: {
+    backgroundColor: Color.colorLightsteelblue,
+    width: "24%",
+    borderRadius: Border.br_81xl,
+    bottom: "0%",
+    top: "0%",
+    height: "100%",
+    position: "absolute",
+  },
+  onborading1Child: {
+    top: 350,
+    left: 0,
+    borderTopLeftRadius: Border.br_5xl,
+    borderTopRightRadius: Border.br_5xl,
+    backgroundColor: "#fff",
+    shadowColor: "rgba(249, 253, 255, 0.25)",
+    shadowRadius: 6,
+    elevation: 6,
+    width: 360,
+    height: 290,
+    position: "absolute",
+    shadowOpacity: 1,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+  },
+  easy: {
+    top: 374,
+    left: 162,
+    fontSize: 20,
+    letterSpacing: 0.4,
+    lineHeight: 34,
+    fontWeight: "600",
+    fontFamily: FontFamily.poppinsSemiBold,
+    color: "#273f44",
+    textAlign: "center",
+    position: "absolute",
+  },
+  catatKeuanganmuDengan: {
+    top: 420,
+    left: 33,
+    fontSize: 16,
+    letterSpacing: 0.2,
+    lineHeight: 22,
+    fontFamily: FontFamily.poppinsRegular,
+    width: 310,
+    color: Color.colorGray,
+    textAlign: "center",
+    position: "absolute",
+  },
+  saly3Icon: {
+    left: "0%",
+    width: "100%",
+    maxWidth: "100%",
+    bottom: "0%",
+    height: "100%",
+  },
+  saly3: {
+    top: 63,
+    left: 55,
+    borderStyle: "solid",
+    borderColor: "#000",
+    borderWidth: 1,
+    width: 250,
+    height: 240,
+    position: "absolute",
+    elevation: 4,
+    shadowRadius: 4,
+    shadowColor: "rgba(0, 0, 0, 0.25)",
+    shadowOpacity: 1,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+  },
+  nextIcon: {
+    width: "12.7%",
+    // left: "87.3%",
+  },
+  paginationChild: {
+    width: "36%",
+    right: "64%",
+    backgroundColor: "#0aa3f0",
+    borderRadius: Border.br_81xl,
+    left: "0%",
+    bottom: "0%",
+    top: "0%",
+    height: "100%",
+    position: "absolute",
+  },
+  paginationItem: {
+    right: "32%",
+    left: "44%",
+  },
+  paginationInner: {
+    left: "76%",
+    right: "0%",
+    backgroundColor: Color.colorLightsteelblue,
+    width: "24%",
+  },
+  pagination: {
+    height: "10%",
+    width: "15.87%",
+    top: "45%",
+    right: "84.13%",
+    bottom: "45%",
+    left: "0%",
+    position: "absolute",
+  },
+  nextParent: {
+    height: "6.25%",
+    width: "87.5%",
+    top: "89.06%",
+    right: "6.39%",
+    bottom: "4.69%",
+    left: "6.11%",
+    position: "absolute",
+    elevation: 4,
+    shadowRadius: 4,
+    shadowColor: "rgba(0, 0, 0, 0.25)",
+    shadowOpacity: 1,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+  },
+  skip: {
+    fontSize: 14,
+    fontWeight: "500",
+    fontFamily: FontFamily.poppinsMedium,
+    textAlign: "left",
+    left: "0%",
+    top: "0%",
+    color: Color.colorGray,
+    position: "absolute",
+  },
+  skipWrapper: {
+    height: "3.28%",
+    width: "8.33%",
+    top: "3.13%",
+    right: "6.11%",
+    bottom: "93.59%",
+    left: "85.56%",
+    position: "absolute",
+  },
+  onborading1: {
+    borderRadius: 12,
+    backgroundColor: "#aadaf1",
+    flex: 1,
+    height: 640,
+    overflow: "hidden",
+    width: "100%",
+    shadowOpacity: 1,
+    elevation: 4,
+    shadowRadius: 4,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowColor: "rgba(0, 0, 0, 0.25)",
+  },
+});
+
+export default Onborading;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import * as React from "react";
+import { StyleSheet, View, Pressable, Text, Image, TouchableHighlight } from "react-native";
+import { Color, Border, FontFamily } from "./GlobalStyles";
+import { SafeAreaView } from "react-native";
+
+const Onboarding2 = ({handlechange}) => {
+  return (
+    <SafeAreaView>
+    <View>
+      <Pressable
+        style={[styles.onborading1Child, styles.saly3ShadowBox]}
+        onPress={() => {}}
+      />
+      <Text style={styles.easy}>SIMPLE</Text>
+      <Text style={styles.catatKeuanganmuDengan}>
+        {`Track your finances with ease. Every expense and income will be neatly recorded. You can view daily, weekly, and monthly expenses.`}
+      </Text>
+      <View style={[styles.saly3, styles.saly3ShadowBox]}>
+        <Image
+          style={[styles.saly3Icon, styles.iconPosition]}
+          resizeMode="cover"
+          source={require("../../assets/Saly3.png")}
+        />
+      </View>
+      <TouchableHighlight
+  activeOpacity={0.6}
+  underlayColor="#DDDDDD"
+  onPress={handlechange}>
+     <Text    > next</Text>
+     </TouchableHighlight>
+      <View style={styles.skipWrapper}>
+        <Text style={styles.skip}>Skip</Text>
+      </View>
+    </View>
+    </SafeAreaView>
+  );
+};
+
+
+const styles = StyleSheet.create({
+    saly3ShadowBox: {
+      shadowOpacity: 1,
+      shadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      position: "absolute",
+    },
+    iconPosition: {
+      maxHeight: "100%",
+      maxWidth: "100%",
+      bottom: "0%",
+      height: "100%",
+      right: "0%",
+      top: "0%",
+      position: "absolute",
+      overflow: "hidden",
+    },
+    paginationLayout: {
+      backgroundColor: Color.colorLightsteelblue,
+      width: "24%",
+      borderRadius: Border.br_81xl,
+      bottom: "0%",
+      top: "0%",
+      height: "100%",
+      position: "absolute",
+    },
+    onborading1Child: {
+      top: 350,
+      left: 0,
+      borderTopLeftRadius: Border.br_5xl,
+      borderTopRightRadius: Border.br_5xl,
+      backgroundColor: "#fff",
+      shadowColor: "rgba(249, 253, 255, 0.25)",
+      shadowRadius: 6,
+      elevation: 6,
+      width: 360,
+      height: 290,
+      position: "absolute",
+      shadowOpacity: 1,
+      shadowOffset: {
+        width: 0,
+        height: 4,
+      },
+    },
+    easy: {
+      top: 374,
+      left: 162,
+      fontSize: 20,
+      letterSpacing: 0.4,
+      lineHeight: 34,
+      fontWeight: "600",
+      fontFamily: FontFamily.poppinsSemiBold,
+      color: "#273f44",
+      textAlign: "center",
+      position: "absolute",
+    },
+    catatKeuanganmuDengan: {
+      top: 420,
+      left: 33,
+      fontSize: 16,
+      letterSpacing: 0.2,
+      lineHeight: 22,
+      fontFamily: FontFamily.poppinsRegular,
+      width: 310,
+      color: Color.colorGray,
+      textAlign: "center",
+      position: "absolute",
+    },
+    saly3Icon: {
+      left: "0%",
+      width: "100%",
+      maxWidth: "100%",
+      bottom: "0%",
+      height: "100%",
+    },
+    saly3: {
+      top: 63,
+      left: 55,
+      borderStyle: "solid",
+      borderColor: "#000",
+      borderWidth: 1,
+      width: 250,
+      height: 240,
+      position: "absolute",
+      elevation: 4,
+      shadowRadius: 4,
+      shadowColor: "rgba(0, 0, 0, 0.25)",
+      shadowOpacity: 1,
+      shadowOffset: {
+        width: 0,
+        height: 4,
+      },
+    },
+    nextIcon: {
+      width: "12.7%",
+      left: "87.3%",
+    },
+    paginationChild: {
+      width: "36%",
+      right: "64%",
+      backgroundColor: "#0aa3f0",
+      borderRadius: Border.br_81xl,
+      left: "0%",
+      bottom: "0%",
+      top: "0%",
+      height: "100%",
+      position: "absolute",
+    },
+    paginationItem: {
+      right: "32%",
+      left: "44%",
+    },
+    paginationInner: {
+      left: "76%",
+      right: "0%",
+      backgroundColor: Color.colorLightsteelblue,
+      width: "24%",
+    },
+    pagination: {
+      height: "10%",
+      width: "15.87%",
+      top: "45%",
+      right: "84.13%",
+      bottom: "45%",
+      left: "0%",
+      position: "absolute",
+    },
+    nextParent: {
+      height: "6.25%",
+      width: "87.5%",
+      top: "89.06%",
+      right: "6.39%",
+      bottom: "4.69%",
+      left: "6.11%",
+      position: "absolute",
+      elevation: 4,
+      shadowRadius: 4,
+      shadowColor: "rgba(0, 0, 0, 0.25)",
+      shadowOpacity: 1,
+      shadowOffset: {
+        width: 0,
+        height: 4,
+      },
+    },
+    skip: {
+      fontSize: 14,
+      fontWeight: "500",
+      fontFamily: FontFamily.poppinsMedium,
+      textAlign: "left",
+      left: "0%",
+      top: "0%",
+      color: Color.colorGray,
+      position: "absolute",
+    },
+    skipWrapper: {
+      height: "3.28%",
+      width: "8.33%",
+      top: "3.13%",
+      right: "6.11%",
+      bottom: "93.59%",
+      left: "85.56%",
+      position: "absolute",
+    },
+    onborading1: {
+      borderRadius: 12,
+      backgroundColor: "#aadaf1",
+      flex: 1,
+      height: 640,
+      overflow: "hidden",
+      width: "100%",
+      shadowOpacity: 1,
+      elevation: 4,
+      shadowRadius: 4,
+      shadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      shadowColor: "rgba(0, 0, 0, 0.25)",
+    },
+  });
+  
+export default Onboarding2;
+
+
